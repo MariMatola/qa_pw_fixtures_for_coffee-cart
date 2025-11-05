@@ -2,6 +2,7 @@ import { test } from '../fixtures/fixtures';
 import { coffeePrices } from '../../src/constants';
 import { 
   priceFormatStr,
+  totalPriceFormatStr, 
  } from '../../src/common/helpers/getPriceForQuantity';
 
 test('Assert cart updated correctly after clicking plus for drinks', async ({
@@ -37,7 +38,7 @@ test('Assert cart updated correctly after clicking plus for drinks', async ({
     priceFormatStr(coffeePrices.espresso *2));
 
   await cartPage.assertTotalCheckoutContainsValue(
-    priceFormatStr(
+    totalPriceFormatStr(
       coffeePrices.espresso *2 + coffeePrices.cappucino *2
     )
   );
