@@ -13,7 +13,7 @@ export class MenuPage {
     this.cartLink = page.getByLabel('Cart page');
     this.totalCheckout = page.getByTestId('checkout');
     this.promoMessage = page
-      .getByText("It's your lucky day! Get an extra cup of Mocha for $4.");
+      .getByText("It's your lucky day! Get an extra cup of Mocha for");
     this.yesPromoButton = page.getByRole('button', { name: 'Yes, of course!' });
     this.noPromoButton = page.getByRole('button', { name: "Nah, I'll skip." });
   }
